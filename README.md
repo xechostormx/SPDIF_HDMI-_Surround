@@ -47,7 +47,28 @@ How It Works
 After import and a reboot (or a restart of the Windows Audio and Windows Audio Device Graph Isolation services), any HDMI or S/PDIF output device whose driver advertises bit-stream capability will list these codecs in its Supported Formats tab.
 Requirements
 
+Sound reg file: For openal + dsoundal
+🎧 What IndirectSound Is
+
+IndirectSound is a small compatibility layer that restores 3D positional audio (surround sound, hardware‑accelerated DirectSound3D effects) in older Windows games that lost this feature after Microsoft removed hardware audio acceleration starting with Windows Vista
+
+What It Actually Does
+
+IndirectSound works by:    Allowing those games to output true 3D positional surround sound again (rear, side, 5.1, 7.1 setups)
+
+    Fixing games where 3D audio is missing or broken on modern Windows
+
+    Acting as a drop‑in replacement for dsound.dll  in the game folder
+
+    Restoring EAX‑style effects for some titles (via emulation)
+
+It’s essentially a modern replacement for what Creative ALchemy does — but for any sound card, not just Sound Blaster hardware
+
+    Emulating DirectSound3D hardware acceleration that old games expect
+
+    
     Windows 11 (x64)
+    
 
     Administrator privileges to import .reg files
 
